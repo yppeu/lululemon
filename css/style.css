@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/*====================================================
+header
+======================================================*/
+
+header {
+    position: fixed;
+    z-index: 999;
+    padding: 32px;
+    margin-bottom: 30px;
+}
+
+header,
+header nav ul,
+header .search-group,
+header .search-group .icon-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    width: 10%;
+}
+
+header h1 .logo-img img {
+    max-width: 100%;
+}
+
+header nav ul li:not(:last-child) {
+    margin-right: 60px;
+}
+
+header .search-group input {
+    margin-right: 20px;
+}
+
+header .search-group .icon-group a {
+    margin-right: 10px;
+}
+
+header .search-group input {
+    border: initial;
+    border-bottom: 1px solid #000;
+    outline: 0;
+    padding: 5px;
+}
+
+header .search-group input::placeholder {
+    font-size: 14px;
+    color: #000;
+}
+
+header .search-group .icon-group .burger div {
+    position: relative;
+    background: #000;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.5s;
+    border-radius: 3px;
+}
+
+/*==========================
+공통 
+============================*/
+.container {
+    max-width: 1408px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: auto;
+}
+
+main .section1 .banner-img img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+main .section2 .tit-box {
+    padding: 96px 33px;
+}
+
+main .section2 .tit-box h3 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 13px;
+}
+
+main .section2 .tit-box p {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+main .section4 {
+    padding: 96px 33px;
+    text-align: center;
+}
+
+main .section4 button {
+    width: 328px;
+    border: 1px solid #C8CBD2;
+    padding: 20px;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 36px;
+}
+
+main .section4 button span {
+    color: #D00A2C;
+    font-weight: 700;
+}
+
+
+main .section4 img {
+    max-width: 90%;
+    margin: auto;
+}
+
+main .section5 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .left-box .top-box .logo-img img {
+    max-width: 100%;
+}
+
+@media all and (max-width:400px) {}
