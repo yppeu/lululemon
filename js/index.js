@@ -32,3 +32,7 @@ var swiper = new Swiper(".mySwiper3", {
     clickable: true,
   },
 });
+var swiper = new Swiper(".mySwiper4", {
+  watchSlidesProgress: true,
+  slidesPerView: 3,
+});

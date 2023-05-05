@@ -78,22 +78,66 @@ main .section1 .banner-img img {
     object-fit: contain;
 }
 
-main .section2 .tit-box {
+main .section2 .tit-box,
+main .section3 .tit-box {
     padding: 96px 33px;
 }
 
-main .section2 .tit-box h3 {
+main .section2 .tit-box h3,
+main .section3 .tit-box h3 {
     font-size: 40px;
     font-weight: 700;
     text-align: center;
     letter-spacing: -1px;
-    margin-bottom: 13px;
 }
 
-main .section2 .tit-box p {
+main .section2 .article-wrap .article-group .article-box,
+main .section3 .article-wrap .article-group .article-box {
+    margin-right: 0 !important;
+}
+
+main .section2 .article-wrap .article-group .article-box>p:first-of-type,
+main .section3 .article-wrap .article-group .article-box>p:first-of-type {
+    font-size: 14px;
+    text-align: right;
+    color: #ef987f;
+    padding: 10px 0;
+    letter-spacing: -1px;
+}
+
+main .section2 .article-wrap .article-group .article-box>p:last-of-type,
+main .section3 .article-wrap .article-group .article-box>p:last-of-type {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+main .section2 .article-wrap .article-group .article-box .price-box,
+main .section3 .article-wrap .article-group .article-box .price-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+}
+
+main .section2 .article-wrap .article-group .article-box .price-box p:nth-child(1),
+main .section3 .article-wrap .article-group .article-box .price-box p:nth-child(1) {
+    color: #ff4000;
+    margin-right: 6px;
+}
+
+main .section2 .article-wrap .article-group .article-box .price-box p:nth-child(2),
+main .section3 .article-wrap .article-group .article-box .price-box p:nth-child(2) {
+    margin-right: 9px;
+}
+
+main .section2 .article-wrap .article-group .article-box .price-box p:nth-child(3),
+main .section3 .article-wrap .article-group .article-box .price-box p:nth-child(3) {
+    color: #979797;
+    font: inherit;
+    font-weight: normal;
     font-size: 16px;
-    font-weight: 500;
-    text-align: center;
+    text-decoration: line-through;
 }
 
 main .section4 {
@@ -118,15 +162,103 @@ main .section4 button span {
 
 
 main .section4 img {
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
 }
 
 main .section5 {
+    margin-bottom: 30px;
+}
+
+main .section5,
+main .section6 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
+
+main .section5 .left-box,
+main .section6 .left-box {
+    margin-right: 60px;
+}
+
+main .section5 .right-box p:first-child,
+main .section6 .left-box p:first-child {
+    font-size: 42px;
+    line-height: 52px;
+    color: #222;
+    font-weight: 700;
+}
+
+main .section5 .right-box p:last-child,
+main .section6 .left-box p:last-child {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #333;
+}
+
+main .section5 .right-box button,
+main .section6 .left-box button {
+    padding: 13px 24px;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main .section7 {
+    margin: 96px 0;
+    padding: 96px 33px;
+    background: #D00A2C;
+    color: #fff;
+    text-align: center;
+}
+
+main .section7 p:nth-child(1) {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 28px;
+    margin: 0 auto 20px;
+    letter-spacing: -1px;
+    border-bottom: 2px solid #fff;
+    line-height: 1.2;
+    padding-bottom: 5px;
+}
+
+main .section7 p:nth-child(2) {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: -0.03px;
+}
+
+main .section7 p:nth-child(3) {
+    padding: 16px 0 0;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+main .section7 button {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    letter-spacing: -0.03px;
+    margin-top: 50px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+/* main .section8 {
+    display: flex;
+    flex-direction: row;
+} */
 
 footer .left-box .top-box .logo-img img {
     max-width: 100%;
