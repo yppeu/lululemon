@@ -43,8 +43,16 @@ header .search-group input {
     margin-right: 20px;
 }
 
+header .search-group .icon-group .img-box {
+    width: 50%;
+}
+
 header .search-group .icon-group a {
     margin-right: 10px;
+}
+
+header .search-group .icon-group .img-box a img {
+    max-width: 100%;
 }
 
 header .search-group input {
