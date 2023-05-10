@@ -1,5 +1,111 @@
 @charset "UTF-8";
 
+
+header nav #gnb {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: auto;
+    z-index: 999;
+}
+
+header nav #gnb .dept1 {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 10px 30px;
+}
+
+header nav #gnb .dept1 .inner-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    /* transform: translateX(-25%); */
+    padding-top: 30px;
+    display: none;
+    text-align: center;
+}
+
+/* header nav #gnb .dept2:last-child {
+    position: absolute;
+    left: 0;
+    top: 100%;
+} */
+
+header nav #gnb .dept2 {
+    width: 100%;
+    padding: 10px 0;
+}
+
+header nav #gnb .dept2>a:hover,
+header nav #gnb .dept2>a:active,
+header nav #gnb .dept2>a:focus {
+    font-weight: 700;
+}
+
+header .search-group .icon-group .burger {
+    margin-left: auto;
+    position: relative;
+    z-index: 9999;
+}
+
+header .search-group .icon-group .burger.active div:nth-child(1) {
+    display: none;
+}
+
+header .search-group .icon-group .burger.active div:nth-child(2) {
+    transform: rotate(130deg);
+}
+
+header .search-group .icon-group .burger.active div:nth-child(3) {
+    transform: rotate(45deg);
+    top: 0;
+    position: absolute;
+}
+
+header .search-group .icon-group .burger a div {
+    position: relative;
+    background: #000;
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.5s;
+    border-radius: 3px;
+}
+
+header .search-group .icon-group .menu_open {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+}
+
+header .search-group .icon-group .menu_open>ul {
+    display: flex;
+    flex-direction: row;
+    padding-top: 150px;
+}
+
+header .search-group .icon-group .menu_open>ul li {
+    width: 20%;
+}
+
+.hd_bg {
+    /* background: #fff; */
+    width: 100%;
+    height: 0;
+    left: 0;
+    z-index: -100;
+    position: absolute;
+}
+
 /*====================================================
 header
 ======================================================*/
@@ -52,6 +158,7 @@ header .search-group .icon-group a {
 }
 
 header .search-group .icon-group .img-box a img {
+    width: 70%;
     max-width: 100%;
 }
 
@@ -67,15 +174,6 @@ header .search-group input::placeholder {
     color: #000;
 }
 
-header .search-group .icon-group .burger div {
-    position: relative;
-    background: #000;
-    width: 30px;
-    height: 3px;
-    margin: 5px;
-    transition: all 0.5s;
-    border-radius: 3px;
-}
 
 /*==========================
 공통 
@@ -107,6 +205,34 @@ main .section4 .tit-box h3 {
     letter-spacing: -1px;
 }
 
+main .section2 .article-wrap .article-group .article-box>a img,
+main .section3 .article-wrap .article-group .article-box>a img,
+main .section4 .article-wrap .article-group .article-box>a img {
+    max-width: 100%;
+}
+
+main .section2 .article-wrap .article-group .article-box:first-child>a:first-child::before,
+main .section3 .article-wrap .article-group .article-box:first-child>a:first-child::before {
+    content: '1위';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #D00A2C;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+main .section2 .article-wrap .article-group .article-box:nth-child(2)>a:first-child::after,
+main .section3 .article-wrap .article-group .article-box:nth-child(2)>a:first-child::after {
+    content: '2위';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff4000;
+    color: #fff;
+    padding: 10px 15px;
+}
+
 main .section2 .article-wrap .article-group .article-box .txt-box,
 main .section3 .article-wrap .article-group .article-box .txt-box,
 main .section4 .article-wrap .article-group .article-box .txt-box {
@@ -114,11 +240,25 @@ main .section4 .article-wrap .article-group .article-box .txt-box {
 }
 
 main .section2 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::before,
-main .section3 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::before,
-main .section4 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::before {
+main .section3 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::before {
     content: '인기상품';
     position: absolute;
-    width: 13%;
+    max-width: 20%;
+    height: 20px;
+    padding: 0 1.5px;
+    line-height: 20px;
+    background: #ff4000;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 70px;
+}
+
+main .section4 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::before {
+    content: '88특가';
+    position: absolute;
+    max-width: 20%;
     height: 20px;
     padding: 0 1.5px;
     line-height: 20px;
@@ -144,7 +284,11 @@ main .section4 .article-wrap .article-group .article-box:first-child .txt-box p:
     color: #fff;
     font-size: 12px;
     text-align: center;
-    margin-left: 80px;
+    margin-left: 65px;
+}
+
+main .section4 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::after {
+    margin-left: 85px;
 }
 
 main .section2 .article-wrap .article-group .article-box .txt-box>p:first-of-type,
@@ -185,6 +329,8 @@ main .section2 .article-wrap .article-group .article-box .txt-box .price-box p:n
 main .section3 .article-wrap .article-group .article-box .txt-box .price-box p:nth-child(2),
 main .section4 .article-wrap .article-group .article-box .txt-box .price-box p:nth-child(2) {
     margin-right: 9px;
+    font-weight: 600;
+    letter-spacing: -1px;
 }
 
 main .section2 .article-wrap .article-group .article-box .txt-box .price-box p:nth-child(3),
