@@ -271,8 +271,7 @@ main .section4 .article-wrap .article-group .article-box:first-child .txt-box p:
 }
 
 main .section2 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::after,
-main .section3 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::after,
-main .section4 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::after {
+main .section3 .article-wrap .article-group .article-box:first-child .txt-box p:last-child::after {
     content: '주문폭주';
     position: absolute;
     width: 13%;
@@ -416,6 +415,10 @@ main .section7 .left-box button {
     margin-top: 20px;
 }
 
+main .section7-mo {
+    display: none;
+}
+
 main .section8 {
     margin: 96px 0;
     padding: 96px 33px;
@@ -459,6 +462,10 @@ main .section8 button {
     margin-top: 50px;
     border: 1px solid #fff;
     color: #fff;
+}
+
+main .section8 .mo-br {
+    display: none;
 }
 
 /*==========================
@@ -593,4 +600,113 @@ footer .copy-box {
     color: #555;
 }
 
-@media all and (max-width:400px) {}
+@media all and (max-width:1400px) {
+    main .section6 .left-box {
+        margin-right: 0;
+    }
+
+    main .section6,
+    main .section7 {
+        flex-direction: column;
+    }
+
+    main .section6 .left-box,
+    main .section7-mo .left-box {
+        margin-bottom: 60px;
+    }
+
+    main .section6 .right-box,
+    main .section7-mo .right-box {
+        text-align: center;
+    }
+
+    main .section7 {
+        display: none;
+    }
+
+    main .section7-mo {
+        display: block;
+    }
+
+    main .section6 {
+        margin-bottom: 60px;
+    }
+
+    main .section7-mo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .section7-mo .right-box p:first-child {
+        font-size: 42px;
+        line-height: 52px;
+        color: #222;
+        font-weight: 700;
+    }
+
+    main .section7-mo .right-box p:last-child {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #333;
+    }
+
+    main .section7-mo .right-box button {
+        padding: 13px 24px;
+        border-radius: 4px;
+        background-color: #1e1e1e;
+        color: #fff;
+        font-size: 17px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+}
+
+@media all and (max-width:1080px) {
+
+    header nav #gnb,
+    header .search-group input {
+        display: none;
+    }
+
+    header {
+        border-bottom: none;
+    }
+
+    header h1 {
+        width: 13%;
+    }
+
+    footer .content-group {
+        flex-direction: column;
+    }
+
+    footer .content-group .left-box {
+        margin-bottom: 30px;
+    }
+}
+
+@media all and (max-width:960px) and (min-width:400px) {
+    header h1 {
+        width: 13%;
+    }
+
+    main .section8 p:nth-child(1) {
+        font-size: 20px;
+    }
+
+    main .section8 p:nth-child(2) {
+        font-size: 38px;
+    }
+
+    main .section8 p:nth-child(3) {
+        font-size: 15px;
+    }
+
+    main .section8 .mo-br {
+        display: block;
+    }
+}

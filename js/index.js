@@ -123,8 +123,8 @@ $(document).ready(function () {
   });
 
   /* 햄버거 메뉴 */
-  // $(".burger").click(function () {
-  //   $(this).toggleClass("active");
-  //   $(".menu_open").slideToggle();
-  // });
+  $(".burger").click(function () {
+    $(this).toggleClass("active");
+    $(".menu_open").slideToggle();
+  });
 });
