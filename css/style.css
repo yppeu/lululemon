@@ -29,11 +29,9 @@ header nav #gnb .dept1 .inner-menu {
     text-align: center;
 }
 
-/* header nav #gnb .dept2:last-child {
-    position: absolute;
-    left: 0;
-    top: 100%;
-} */
+header nav #gnb .dept1 .inner-menu>li>a {
+    font-size: 14px;
+}
 
 header nav #gnb .dept2 {
     width: 100%;
@@ -98,12 +96,12 @@ header .search-group .icon-group .menu_open>ul li {
 }
 
 .hd_bg {
-    /* background: #fff; */
-    width: 100%;
+    position: absolute;
+    background: #fff;
+    width: 100vw;
     height: 0;
     left: 0;
     z-index: -100;
-    position: absolute;
 }
 
 /*====================================================
@@ -381,9 +379,12 @@ main .section7 {
     justify-content: center;
 }
 
-main .section6 .left-box,
-main .section7 .left-box {
+main .section6 .left-box {
     margin-right: 60px;
+}
+
+main .section7 .right-box {
+    margin-left: 60px;
 }
 
 main .section6 .right-box p:first-child,

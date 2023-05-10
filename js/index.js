@@ -101,7 +101,7 @@ $(document).ready(function () {
     console.log(menuHeight, inmeHegiht);
     $(".hd_bg").css({
       top: menuHeight + "px",
-      height: inmeHegiht + "px",
+      height: inmeHegiht + 80 + "px",
     });
     $("#header").css("background", "#fff");
   });
@@ -121,8 +121,8 @@ $(document).ready(function () {
   });
 
   /* 햄버거 메뉴 */
-  $(".burger").click(function () {
-    $(this).toggleClass("active");
-    $(".menu_open").slideToggle();
-  });
+  // $(".burger").click(function () {
+  //   $(this).toggleClass("active");
+  //   $(".menu_open").slideToggle();
+  // });
 });
