@@ -104,12 +104,14 @@ $(document).ready(function () {
       height: inmeHegiht + 80 + "px",
     });
     $("#header").css("background", "#fff");
+    // $("#header").css("border-bottom", "1px solid #ccc");
   });
   // 마우스  leave 시
   gnb.mouseleave(function () {
     $(".inner-menu").hide();
     $(".hd_bg").css("height", "0");
     $("#header").css("background", "");
+    // $("#header").css("border-bottom", "");
   });
   //dept2 hover시 dept1 active
   $(".dept1").mouseenter(function () {
