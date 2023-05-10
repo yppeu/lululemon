@@ -19,21 +19,19 @@ var swiper = new Swiper(".mySwiper2", {
     clickable: true,
   },
   breakpoints: {
-    "@0.00": {
+    // 화면의 넓이가 300px 이상일 때
+    300: {
       slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    "@0.75": {
-      slidesPerView: 2,
       spaceBetween: 20,
     },
-    "@1.00": {
-      slidesPerView: 3,
+    // 화면의 넓이가 600px 이상일 때
+    600: {
+      slidesPerView: 2,
       spaceBetween: 40,
     },
-    "@1.50": {
+    1000: {
       slidesPerView: 4,
-      spaceBetween: 50,
+      spaceBetween: 40,
     },
   },
 });
@@ -48,21 +46,19 @@ var swiper = new Swiper(".mySwiper3", {
     clickable: true,
   },
   breakpoints: {
-    "@0.00": {
+    // 화면의 넓이가 300px 이상일 때
+    300: {
       slidesPerView: 1,
-      spaceBetween: 10,
-    },
-    "@0.75": {
-      slidesPerView: 2,
       spaceBetween: 20,
     },
-    "@1.00": {
-      slidesPerView: 3,
+    // 화면의 넓이가 600px 이상일 때
+    600: {
+      slidesPerView: 2,
       spaceBetween: 40,
     },
-    "@1.50": {
+    1000: {
       slidesPerView: 4,
-      spaceBetween: 50,
+      spaceBetween: 40,
     },
   },
 });
@@ -76,6 +72,22 @@ var swiper = new Swiper(".mySwiper4", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  breakpoints: {
+    // 화면의 넓이가 300px 이상일 때
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // 화면의 넓이가 600px 이상일 때
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1000: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
   },
 });
 
