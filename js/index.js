@@ -85,7 +85,7 @@ var swiper = new Swiper(".mySwiper4", {
       spaceBetween: 40,
     },
     1000: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 40,
     },
   },
@@ -105,25 +105,31 @@ $(document).ready(function () {
   // 마우스 오버 시
   // mouseenter는 오로지 자기 자신에게 마우스 포인터가 와야만 발생
   gnb.mouseenter(function () {
-    $(".inner-menu").show();
+    $(".inner-menu").show();    
+    $("#header").css({
+      background: "#fff",
+      "border-bottom": "1px solid #ccc",
+    });
     // menu bg
     // 선택한 요소의 세로 값(패딩 포함)을 가져옴
     var menuHeight = $("#header").outerHeight();
-    var inmeHegiht = $(".inner-menu").outerHeight();
-    console.log(menuHeight, inmeHegiht);
+    var inmeHeight = $(".inner-menu").outerHeight();
+    console.log(menuHeight, inmeHeight);
     $(".hd_bg").css({
       top: menuHeight + "px",
-      height: inmeHegiht + 80 + "px",
+      height: inmeHeight + 80 + "px",
     });
-    $("#header").css("background", "#fff");
-    // $("#header").css("border-bottom", "1px solid #ccc");
   });
   // 마우스  leave 시
   gnb.mouseleave(function () {
     $(".inner-menu").hide();
-    $(".hd_bg").css("height", "0");
-    $("#header").css("background", "");
-    // $("#header").css("border-bottom", "");
+    $(".hd_bg").css("height", "0");  
+    $("#header").css({
+      "background": "",
+      "border-bottom": "",
+    });
+    // console.log(1);
+    // $("#header").addClass("border-bottom-none");
   });
   //dept2 hover시 dept1 active
   $(".dept1").mouseenter(function () {
@@ -138,5 +144,6 @@ $(document).ready(function () {
   $(".burger").click(function () {
     $(this).toggleClass("active");
     $(".menu_open").slideToggle();
+    $(".inner-menu>li").show();
   });
 });
