@@ -105,7 +105,7 @@ $(document).ready(function () {
   // 마우스 오버 시
   // mouseenter는 오로지 자기 자신에게 마우스 포인터가 와야만 발생
   gnb.mouseenter(function () {
-    $(".inner-menu").show();    
+    $(".inner-menu").show();
     $("#header").css({
       background: "#fff",
       "border-bottom": "1px solid #ccc",
@@ -123,9 +123,9 @@ $(document).ready(function () {
   // 마우스  leave 시
   gnb.mouseleave(function () {
     $(".inner-menu").hide();
-    $(".hd_bg").css("height", "0");  
+    $(".hd_bg").css("height", "0");
     $("#header").css({
-      "background": "",
+      background: "",
       "border-bottom": "",
     });
     // console.log(1);
@@ -144,6 +144,10 @@ $(document).ready(function () {
   $(".burger").click(function () {
     $(this).toggleClass("active");
     $(".menu_open").slideToggle();
-    $(".inner-menu>li").show();
+    if ($(".menu_box").css("display") == "none") {
+      $(".menu_box").css("display", "block");
+    } else {
+      $(".menu_box").css("display", "none");
+    }
   });
 });
